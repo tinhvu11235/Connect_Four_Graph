@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Training runs: checkpoints and replay state (large). Evidence lives in results/.
+runs/
+*.pt
+
+# Office lock files and editor junk
+~$*
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store

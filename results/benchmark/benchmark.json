@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-17T15:05:38",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "torch": "2.11.0+cu128",
+  "python": "3.12.10",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "results": {
+    "Baseline CNN 128x6 (repo default)": {
+      "architecture": "residual_gpu_v1",
+      "parameters": 2136264,
+      "infer_ms_batch256": 1.5254050001385622,
+      "positions_per_s": 167824.28271622676,
+      "train_step_ms_batch1024": 17.314649999995403,
+      "train_peak_gpu_mb": 482.56494140625
+    },
+    "Baseline CNN 256x6": {
+      "architecture": "residual_gpu_v1",
+      "parameters": 7457352,
+      "infer_ms_batch256": 4.500612999836449,
+      "positions_per_s": 56881.14041560628,
+      "train_step_ms_batch1024": 57.848110000486486,
+      "train_peak_gpu_mb": 999.26611328125
+    },
+    "Method 1 160x6, line-of-sight": {
+      "architecture": "method1_v1",
+      "parameters": 8173442,
+      "infer_ms_batch256": 8.933249000110663,
+      "positions_per_s": 28656.986948066566,
+      "train_step_ms_batch1024": 121.68159333329336,
+      "train_peak_gpu_mb": 1510.9072265625
+    },
+    "Method 1 256x6, no line-of-sight (ablation)": {
+      "architecture": "method1_v1",
+      "parameters": 8053378,
+      "infer_ms_batch256": 7.946236999996471,
+      "positions_per_s": 32216.507008300112,
+      "train_step_ms_batch1024": 99.34784666693304,
+      "train_peak_gpu_mb": 1696.6640625
+    },
+    "Method 2 256x6": {
+      "architecture": "method2_v1",
+      "parameters": 8053378,
+      "infer_ms_batch256": 6.574509000056423,
+      "positions_per_s": 38938.26900195939,
+      "train_step_ms_batch1024": 90.52336000022478,
+      "train_peak_gpu_mb": 1639.5166015625
+    }
+  }
+}
